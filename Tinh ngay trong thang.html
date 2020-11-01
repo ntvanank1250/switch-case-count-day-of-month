@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinh ngay trong thang</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>Thang:</td>
+            <td onchange="tinhsongay()"><input type="number" id="thang" max=12 min=1></td>
+
+        </tr>
+        <tr>
+            <td>So ngay la:</td>
+            <td id="songay"></td>
+        </tr>
+        <script>
+            function tinhsongay() {
+                let thang = Number(document.getElementById("thang").value)
+                switch (thang) {
+                    case 1:
+                    case 3:
+                    case 5:
+                    case 7:
+                    case 8:
+                    case 10:
+                    case 12:
+                        document.getElementById("songay").innerText = 31
+                        break
+                    case 2:
+                        document.getElementById("songay").innerText = 28
+                        break
+
+                    default:
+                        document.getElementById("songay").innerText = 30
+
+                }
+            }
+
+        </script>
+
+
+
+    </table>
+</body>
+
+</html>
